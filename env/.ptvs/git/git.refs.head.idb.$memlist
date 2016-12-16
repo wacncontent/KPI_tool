@@ -1,0 +1,9 @@
+HEAD
+Reference
+__all__
+Head
+GitCommandError
+SymbolicReference
+join_path
+strip_quotes
+SectionConstraint

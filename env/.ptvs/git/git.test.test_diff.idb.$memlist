@@ -1,0 +1,15 @@
+DiffIndex
+assert_true
+with_rw_directory
+assert_equal
+TestBase
+GitCommandError
+NULL_TREE
+TestDiff
+ddt
+StringProcessAdapter
+osp
+Repo
+fixture
+Git
+Diff

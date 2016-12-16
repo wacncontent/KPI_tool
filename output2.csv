@@ -1,0 +1,54 @@
+,Most Fresh,Fresh,State,Abandon
+active directory,161,17,17,21
+app service,7,5,0,0
+app service api,10,1,0,0
+app service mobile,43,0,0,0
+app service web,68,38,0,0
+application gateway,26,2,0,0
+automation,12,2,10,0
+azure portal,19,1,0,5
+backup,29,7,0,0
+batch,16,6,0,0
+cdn,0,0,0,25
+cloud services,31,16,2,10
+documentdb,63,2,4,1
+event hubs,23,0,2,0
+expressroute,29,0,0,0
+hdinsight,76,13,0,9
+iot hub,59,0,2,0
+iot suite,14,4,0,0
+key vault,9,1,0,1
+load balancer,16,0,13,0
+media services,91,1,6,0
+mobile services,4,84,0,0
+multi factor authentication,13,13,0,0
+mysql,14,5,0,74
+notification hubs,20,0,10,5
+others,73,37,24,73
+redis cache,21,2,0,0
+scheduler,8,0,1,0
+security,12,1,0,1
+service bus,34,1,14,20
+service fabric,79,0,40,11
+site recovery,27,0,1,4
+sql data warehouse,44,6,16,9
+sql database,113,22,15,26
+sql server stretch database,2,4,3,6
+storage,62,33,0,3
+stream analytics,25,0,0,0
+traffic manager,16,0,0,5
+virtual machine scale sets,11,0,4,0
+virtual machines,215,32,11,48
+virtual network,10,4,1,58
+vpn gateway,22,0,4,2
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+New articles for exixting services #,173,,,
+ACOM Removed files #,66,,,
+ACOM No Updates #,1477,,,
+Content Refresh #,588,,,
+Should Update But not update #,73,,,
+Total #,2204,,,

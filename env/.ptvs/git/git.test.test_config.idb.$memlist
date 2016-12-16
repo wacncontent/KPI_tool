@@ -1,0 +1,13 @@
+TestBase
+fixture_path
+cp
+rmfile
+glob
+TestCase
+with_rw_directory
+_rm_lock_files
+GitConfigParser
+_tc_lock_fpaths
+osp
+string_types
+io

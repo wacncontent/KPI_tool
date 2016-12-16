@@ -1,0 +1,12 @@
+ZippedStoreShaWriter
+LooseObjectDB
+ObjectDBW
+DecompressMemMapReader
+OStream
+BadObject
+MemoryDB
+__all__
+BytesIO
+IStream
+ObjectDBR
+UnsupportedOperation

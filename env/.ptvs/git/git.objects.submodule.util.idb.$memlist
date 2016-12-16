@@ -1,0 +1,13 @@
+git
+sm_name
+GitConfigParser
+weakref
+__all__
+find_first_remote_branch
+Object
+sm_section
+SubmoduleConfigParser
+InvalidGitRepositoryError
+BytesIO
+mkhead
+IndexObject

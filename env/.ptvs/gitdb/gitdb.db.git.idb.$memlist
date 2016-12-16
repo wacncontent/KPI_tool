@@ -1,0 +1,10 @@
+GitDB
+LooseObjectDB
+ObjectDBW
+__all__
+ReferenceDB
+CompoundDB
+InvalidDBRoot
+os
+FileDBBase
+PackedDB

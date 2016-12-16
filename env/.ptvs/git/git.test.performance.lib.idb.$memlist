@@ -1,0 +1,12 @@
+GitCmdObjectDB
+GitDB
+k_env_git_repo
+os
+TestBigRepoR
+logging
+TestBase
+rmtree
+Repo
+osp
+tempfile
+TestBigRepoRW

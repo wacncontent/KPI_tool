@@ -1,0 +1,16 @@
+find_first_remote_branch
+RootUpdateProgress
+RootModule
+Submodule
+PATHCHANGE
+UpdateProgress
+BEGIN
+InvalidGitRepositoryError
+END
+__all__
+logging
+git
+REMOVE
+log
+URLCHANGE
+BRANCHCHANGE
