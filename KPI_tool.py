@@ -5,6 +5,7 @@ from datetime import datetime, timedelta
 import git
 from git import GitCommandError
 import json
+import sys
 
 ACN_REPO_PATH = "E:/GitHub/techcontent/"
 ACOM_REPO_PATH = "E:/GitHub/azure-content-pr/"
@@ -228,6 +229,9 @@ class Article:
             return self.get_msdate_in_acom() != self.get_msdate_in_acn()
 
 if __name__ == '__main__':
+    if len(sys.argv)>2:
+        ACN_REPO_PATH = sys.argv[1]
+        ACOM_REPO_PATH = sys.argv[2]
     service_stat = {}
     new_article_for_existing_services = 0
     acom_removed_files = 0
