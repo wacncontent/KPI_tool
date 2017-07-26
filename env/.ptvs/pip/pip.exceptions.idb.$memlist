@@ -13,6 +13,7 @@ RequirementsFileParseError
 HashMismatch
 absolute_import
 VcsHashUnsupported
+UnsupportedPythonVersion
 BadCommand
 repeat
 HashErrors

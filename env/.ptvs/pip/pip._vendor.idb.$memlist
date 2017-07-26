@@ -1,4 +1,5 @@
 retrying
+webencodings
 colorama
 requests
 html5lib
@@ -8,14 +9,16 @@ ipaddress
 six
 packaging
 pyparsing
-distlib
-vendored
+WHEEL_DIR
+absolute_import
+distro
 progress
 glob
-_markerlib
 DEBUNDLED
+appdirs
 cachecontrol
 lockfile
+ordereddict
+distlib
 sys
-absolute_import
-WHEEL_DIR
+vendored

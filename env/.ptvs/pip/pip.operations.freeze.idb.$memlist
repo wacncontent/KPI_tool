@@ -1,10 +1,12 @@
 logger
+RequirementParseError
 pkg_resources
 absolute_import
 logging
-freeze
-InstallRequirement
+re
+COMMENT_RE
 canonicalize_name
 get_installed_distributions
+freeze
 pip
-re
+InstallRequirement

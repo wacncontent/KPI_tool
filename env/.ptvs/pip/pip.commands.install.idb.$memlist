@@ -1,4 +1,6 @@
+get_lib_location_guesses
 tempfile
+get_installed_version
 logger
 os
 CommandError

@@ -2,9 +2,9 @@ Filter
 rcdataElements
 absolute_import
 unicode_literals
+base
 division
 spaceCharacters
 SPACES_REGEX
-_base
 re
 collapse_spaces

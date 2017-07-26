@@ -3,9 +3,11 @@ working_set
 map
 resource_exists
 ScanningLoader
+contextlib
+os
 six
-NonDataProperty
-add_activation_listener
+_namespace_packages
+itertools
 require
 EntryPoint
 normalize_path
@@ -13,6 +15,9 @@ test
 Command
 TestLoader
 unittest_main
-_namespace_packages
+operator
+NonDataProperty
+filter
+add_activation_listener
 resource_listdir
 DistutilsOptionError

@@ -11,6 +11,7 @@ logging
 urlsplit
 vcs
 urlunsplit
+parse_version
 samefile
 rmtree
 urllib_parse

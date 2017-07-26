@@ -53,6 +53,7 @@ class Article:
         self._service = None
         self._no_update_or_not = None
         self._new_article_or_not = None
+        self.wacn_date_old = None
 
     def _get_acom_articles(self):
         Article.ACOM_ARTICLES = {}
@@ -61,6 +62,32 @@ class Article:
             filename = os.path.basename(article)
             if Article.ACOM_ARTICLES.get(filename.lower()):
                 print("Warning: "+article+" duplicated.")
+                article_pre = Article.ACOM_ARTICLES[filename.lower()]
+                file = open(article_pre, "r", encoding="utf8")
+                mdcontent = file.read()
+                msdate_match = re.findall("ms\.date\s*=\s*\"([^\"]*)\"", mdcontent)
+                if len(msdate_match)>0:
+                    msdate_pre = msdate_match[0]
+                else:
+                    msdate_pre = ""
+                file.close()
+                file = open(article, "r", encoding="utf8")
+                mdcontent = file.read()
+                msdate_match = re.findall("ms\.date\s*=\s*\"([^\"]*)\"", mdcontent)
+                if len(msdate_match)>0:
+                    msdate = msdate_match[0]
+                else:
+                    msdate = ""
+                file.close()
+                if msdate == "":
+                    continue
+                elif msdate_pre == "":
+                    Article.ACOM_ARTICLES[filename.lower()]=article
+                else:
+                    ms_date = datetime.strptime(msdate, "%m/%d/%Y")
+                    ms_date_pre = datetime.strptime(msdate_pre, "%m/%d/%Y")
+                    if ms_date > ms_date_pre:
+                        Article.ACOM_ARTICLES[filename.lower()]=article
             else:
                 Article.ACOM_ARTICLES[filename.lower()]=article
 
@@ -78,8 +105,8 @@ class Article:
         file = open(self.acnfilepath, "r", encoding="utf8")
         mdcontent = file.read()
         file.close()
-        msdate_match = re.findall("ms\.date=\"([^\"]*)\"", mdcontent)
-        wacndate_match = re.findall("wacn\.date=\"([^\"]*)\"", mdcontent)
+        msdate_match = re.findall("ms\.date\s*=\s*\"([^\"]*)\"", mdcontent)
+        wacndate_match = re.findall("wacn\.date\s*=\s*\"([^\"]*)\"", mdcontent)
         if len(msdate_match)>0:
             self._msdate_in_acn = msdate_match[0]
         else:
@@ -101,7 +128,7 @@ class Article:
             file = open(self.acomfilepath, "r", encoding="utf8")
             mdcontent = file.read()
             file.close()
-            msdate_match = re.findall("ms\.date=\"([^\"]*)\"", mdcontent)
+            msdate_match = re.findall("ms\.date\s*=\s*\"([^\"]*)\"", mdcontent)
             if len(msdate_match)>0:
                 self._msdate_in_acom = msdate_match[0]
             else:
@@ -140,7 +167,7 @@ class Article:
     def get_removed_or_not(self):
         if self.get_excpetion_or_not():
             return None
-        return self.acomfilepath == None
+        return self.acomfilepath == None or self.get_msdate_in_acom() == ""
 
     def get_no_update_or_not(self):
         if self.get_excpetion_or_not():
@@ -157,7 +184,7 @@ class Article:
             except GitCommandError as e:
                 self._no_update_or_not = False
                 return self._no_update_or_not
-            msdate_match = re.findall("ms\.date=\"([^\"]*)\"", old)
+            msdate_match = re.findall("ms\.date\s*=\s*\"([^\"]*)\"", old)
             if len(msdate_match)>0:
                 old_msdate = msdate_match[0]
             else:
@@ -176,9 +203,17 @@ class Article:
             filepath = self.acnfilepath[len(ACN_REPO_PATH):]
             try:
                 old = Article.ACN_GIT_REPO.show(Article.FIRST_CONTENT_REFRESH_DATE.strftime("%m%d%Y")+":"+filepath)
+                wacn_date_olds = re.findall("wacn\.date=\"([\d/]+)\"", old)
+                if len(wacn_date_olds) == 0:
+                    print(self.acnfilepath)
+                    print("old wacn date not exist")
+                    exit()
+                else:
+                    self.wacn_date_old = wacn_date_olds[0]
                 self._new_article_or_not = False
             except GitCommandError as e:
                 self._new_article_or_not = True
+                self.wacn_date_old = False
         return self._new_article_or_not and self.get_service() not in Article.NEW_SERVICES
 
     def _get_last_content_refresh_date(self):
@@ -228,6 +263,21 @@ class Article:
         else:
             return self.get_msdate_in_acom() != self.get_msdate_in_acn()
 
+    def get_content_refresh_or_not(self):
+        if self.wacn_date_old == None:
+            self.get_new_article_for_existing_service_or_not()
+        if self.wacn_date_old == False:
+            return None
+        return self._wacndate != self.wacn_date_old
+
+
+def print_setting():
+    print(Article.LAST_SYNC_DATE)
+    print(Article.THIS_SYNC_DATE)
+    print(Article.NEXT_SYNC_DATE)
+    print(Article.FIRST_CONTENT_REFRESH_DATE)
+    print(Article.LAST_CONTENT_REFRESH_DATE)
+
 if __name__ == '__main__':
     if len(sys.argv)>2:
         ACN_REPO_PATH = sys.argv[1]
@@ -240,7 +290,8 @@ if __name__ == '__main__':
     no_exception = 0
     should_update_but_not_update_or_not = 0
     outfile = open("output.csv", "w", encoding="utf8")
-    outfile.write("file name,service,ms.date in Acom,ms.date in Acn,wacn.date,status,no update in Acom,new article for existing services,removed in Acom,should update but not update,exception\n")
+    outfile.write("file name,service,ms.date in Acom,ms.date in Acn,wacn.date,status,no update in Acom,new article for existing services,removed in Acom,should update but not update,exception,content refresh\n")
+    conten_refresh = 0
     for filename in glob.iglob('E:/GitHub/techcontent/articles/**/*.md', recursive=True):
         filepath = filename.replace("\\", "/")
         print("Proccessing: "+filepath)
@@ -258,10 +309,11 @@ if __name__ == '__main__':
             no_exception += 1
         if article.get_should_update_but_not_update_or_not():
             should_update_but_not_update_or_not += 1
-        line = article.filename+","+article.get_service()+","+article.get_msdate_in_acom()+","+article.get_msdate_in_acn()+","+article.get_wacndate()+","+STATUS_LIST[article.get_status()]+","+str(article.get_no_update_or_not())+","+str(article.get_new_article_for_existing_service_or_not())+","+str(article.get_removed_or_not())+","+str(article.get_should_update_but_not_update_or_not())+","+str(article.get_excpetion_or_not()) +"\n"
+        if article.get_content_refresh_or_not() and not article.get_excpetion_or_not()==True:
+            conten_refresh += 1
+        line = article.filename+","+article.get_service()+","+article.get_msdate_in_acom()+","+article.get_msdate_in_acn()+","+article.get_wacndate()+","+STATUS_LIST[article.get_status()]+","+str(article.get_no_update_or_not())+","+str(article.get_new_article_for_existing_service_or_not())+","+str(article.get_removed_or_not())+","+str(article.get_should_update_but_not_update_or_not())+","+str(article.get_excpetion_or_not())+","+str(article.get_content_refresh_or_not()) +"\n"
         print(line)
         outfile.write(line)
-    conten_refresh = no_exception - should_update_but_not_update_or_not - new_article_for_existing_services - acom_no_updates - acom_removed_files
     total_no_exception_no_new_article_for_existing_services = no_exception - new_article_for_existing_services
     outfile.close()
 
@@ -282,4 +334,5 @@ if __name__ == '__main__':
     outfile.write("Should Update But not update #,"+str(should_update_but_not_update_or_not)+",,,\n")
     outfile.write("Total #,"+str(total_no_exception_no_new_article_for_existing_services)+",,,\n")
     outfile.close()
+    print_setting()
     

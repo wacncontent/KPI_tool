@@ -32,6 +32,7 @@ guess_filename
 ContentDecodingError
 chardet
 datetime
+check_header_validity
 builtin_str
 to_key_val_list
 RequestHooksMixin

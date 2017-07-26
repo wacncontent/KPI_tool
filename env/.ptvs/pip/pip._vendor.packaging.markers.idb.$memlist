@@ -9,10 +9,12 @@ _evaluate_markers
 operator
 string_types
 Node
+Group
 InvalidSpecifier
 UndefinedEnvironmentName
 InvalidMarker
-LPAREN
+Op
+Forward
 os
 VARIABLE
 QuotedString
@@ -29,10 +31,10 @@ ParseException
 _operators
 sys
 __all__
-Group
+ALIASES
 MARKER_OP
 _get_env
-Forward
+LPAREN
 MARKER_EXPR
 stringEnd
 _eval_op

@@ -1,8 +1,8 @@
-pkg_resources
+install_egg_info
 os
 log
 Command
-install_egg_info
-map
+pkg_resources
 dir_util
 unpack_archive
+namespaces

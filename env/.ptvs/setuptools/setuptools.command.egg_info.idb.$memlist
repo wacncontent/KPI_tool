@@ -1,14 +1,16 @@
 time
 FileList
 collections
-convert_path
+warnings
+glob
 egg_info
 write_arg
 warn_depends_obsolete
 safe_version
 overwrite_arg
-packaging
+manifest_maker
 unicode_utils
+translate_pattern
 parse_requirements
 six
 bdist_egg
@@ -18,7 +20,7 @@ EntryPoint
 re
 iter_entry_points
 io
-warnings
+convert_path
 to_filename
 write_file
 edit_config
@@ -31,7 +33,8 @@ write_setup_requirements
 yield_lines
 safe_name
 _write_requirements
-manifest_maker
+DistutilsInternalError
+packaging
 os
 write_requirements
 sdist

@@ -1,5 +1,5 @@
 session
-cookies
+warnings
 head
 utils
 __title__
@@ -12,7 +12,7 @@ Session
 structures
 codes
 exceptions
-packages
+ReadTimeout
 Timeout
 request
 PreparedRequest
@@ -23,7 +23,9 @@ certs
 __license__
 FileModeWarning
 auth
-warnings
+DependencyWarning
+ConnectTimeout
+cookies
 options
 get
 put
@@ -34,12 +36,12 @@ HTTPError
 logging
 delete
 NullHandler
+packages
 URLRequired
 status_codes
 Response
 compat
 __version__
 TooManyRedirects
-pyopenssl
 ConnectionError
 RequestException

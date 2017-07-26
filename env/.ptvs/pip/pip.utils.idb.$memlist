@@ -33,8 +33,9 @@ current_umask
 InstallationError
 os
 re
-running_under_virtualenv
 read_chunks
+running_under_virtualenv
+glibc
 ui
 is_svn_page
 has_leading_dir
@@ -42,11 +43,10 @@ hashes
 stat
 dist_location
 get_installed_distributions
-logger
+packaging
 setuptools_build
 filesystem
 unpack_file
-remove_tracebacks
 logging
 deque
 pkg_resources
@@ -88,6 +88,7 @@ subprocess
 rmtree
 display_path
 read_text_file
+logger
 normalize_path
 site_packages
 locale

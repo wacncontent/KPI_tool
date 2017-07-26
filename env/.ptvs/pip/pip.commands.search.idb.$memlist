@@ -6,6 +6,7 @@ indent_log
 PyPI
 logger
 PipXmlrpcTransport
+OrderedDict
 highest_version
 absolute_import
 logging
@@ -13,6 +14,7 @@ transform_hits
 Command
 CommandError
 SearchCommand
+parse_version
 get_terminal_size
 NO_MATCHES_FOUND
 SUCCESS

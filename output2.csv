@@ -1,54 +1,58 @@
 ,Most Fresh,Fresh,State,Abandon
-active directory,161,17,17,21
-app service,7,5,0,0
-app service api,10,1,0,0
-app service mobile,43,0,0,0
-app service web,68,38,0,0
-application gateway,26,2,0,0
-automation,12,2,10,0
-azure portal,19,1,0,5
-backup,29,7,0,0
-batch,16,6,0,0
-cdn,0,0,0,25
-cloud services,31,16,2,10
-documentdb,63,2,4,1
-event hubs,23,0,2,0
-expressroute,29,0,0,0
-hdinsight,76,13,0,9
-iot hub,59,0,2,0
-iot suite,14,4,0,0
-key vault,9,1,0,1
-load balancer,16,0,13,0
-media services,91,1,6,0
-mobile services,4,84,0,0
-multi factor authentication,13,13,0,0
-mysql,14,5,0,74
-notification hubs,20,0,10,5
-others,73,37,24,73
-redis cache,21,2,0,0
-scheduler,8,0,1,0
-security,12,1,0,1
-service bus,34,1,14,20
-service fabric,79,0,40,11
-site recovery,27,0,1,4
-sql data warehouse,44,6,16,9
-sql database,113,22,15,26
-sql server stretch database,2,4,3,6
-storage,62,33,0,3
-stream analytics,25,0,0,0
-traffic manager,16,0,0,5
-virtual machine scale sets,11,0,4,0
-virtual machines,215,32,11,48
-virtual network,10,4,1,58
-vpn gateway,22,0,4,2
+active directory,132,49,11,19
+app service,2,1,4,5
+app service api,4,5,0,2
+app service mobile,5,2,6,29
+app service web,86,13,17,31
+application gateway,20,4,7,0
+automation,6,1,17,0
+azure portal,1,0,0,3
+azure resource manager,31,5,5,2
+backup,27,0,7,5
+batch,22,0,0,0
+cdn,3,0,0,25
+cloud services,25,0,27,11
+documentdb,59,11,9,9
+event hubs,25,0,1,0
+expressroute,19,0,11,2
+hdinsight,144,2,15,1
+iot hub,62,24,95,0
+iot suite,21,0,0,0
+key vault,5,7,1,0
+load balancer,22,0,2,6
+media services,51,24,21,43
+mobile services,1,0,0,86
+monitoring and diagnostics,7,0,1,9
+multi factor authentication,14,6,0,3
+mysql,9,0,2,84
+notification hubs,1,1,19,12
+others,64,42,23,169
+power bi embedded,12,4,0,0
+redis cache,23,0,0,0
+resiliency,2,8,0,0
+scheduler,0,1,8,0
+security,0,0,0,14
+service bus messaging,33,15,12,1
+service fabric,96,43,12,2
+site recovery,28,4,9,0
+sql data warehouse,31,3,23,22
+sql database,106,0,34,91
+sql server stretch database,6,0,8,2
+storage,72,15,40,9
+stream analytics,28,0,0,0
+traffic manager,9,0,10,2
+virtual machine scale sets,14,0,1,2
+virtual machines,248,30,51,69
+virtual network,44,3,11,38
+vpn gateway,23,1,7,3
 ,,,,
 ,,,,
 ,,,,
 ,,,,
 ,,,,
-New articles for exixting services #,173,,,
-ACOM Removed files #,66,,,
-ACOM No Updates #,1477,,,
-Content Refresh #,588,,,
-Should Update But not update #,73,,,
-Total #,2204,,,
+New articles for exixting services #,157,,,
+ACOM Removed files #,282,,,
+ACOM No Updates #,2099,,,
+Content Refresh #,682,,,
+Should Update But not update #,0,,,
+Total #,2818,,,

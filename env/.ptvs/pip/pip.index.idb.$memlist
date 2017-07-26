@@ -1,12 +1,11 @@
-RemovedInPip10Warning
+splitext
 SECURE_ORIGINS
 cgi
 urllib_request
 egg_info_matches
 SSLError
 ARCHIVE_EXTENSIONS
-RemovedInPip9Warning
-logger
+specifiers
 url_to_path
 namedtuple
 HTMLPage
@@ -24,14 +23,15 @@ cached_property
 DistributionNotFound
 canonicalize_name
 mimetypes
-parse_version
 re
-supported_tags
+RemovedInPip10Warning
 itertools
 FormatControl
 path_to_url
 Link
 warnings
+get_supported
+logger
 HAS_TLS
 sys
 fmt_ctl_formats
@@ -42,6 +42,8 @@ fmt_ctl_no_binary
 fmt_ctl_handle_mutual_exclude
 os
 UnsupportedWheel
+check_requires_python
+unescape
 InvalidWheelFilename
 SUPPORTED_EXTENSIONS
 InstallationCandidate
@@ -50,4 +52,4 @@ normalize_path
 ipaddress
 requests
 html5lib
-splitext
+parse_version

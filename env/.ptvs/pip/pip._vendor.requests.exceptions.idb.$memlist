@@ -8,6 +8,7 @@ RequestsWarning
 ChunkedEncodingError
 SSLError
 URLRequired
+InvalidHeader
 TooManyRedirects
 ConnectionError
 FileModeWarning

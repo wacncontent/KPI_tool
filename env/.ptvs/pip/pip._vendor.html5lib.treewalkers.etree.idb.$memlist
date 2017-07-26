@@ -1,11 +1,11 @@
 moduleFactoryFactory
-text_type
+getETreeModule
 absolute_import
 unicode_literals
+re
 division
 getETreeBuilder
-getETreeModule
 tag_regexp
-_base
+string_types
 OrderedDict
-re
+base

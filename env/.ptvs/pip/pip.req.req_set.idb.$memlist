@@ -3,7 +3,7 @@ InstallRequirement
 unpack_url
 InstallationError
 url_to_path
-HashUnpinned
+UnsupportedPythonVersion
 chain
 dist_in_usersite
 ensure_dir
@@ -15,6 +15,7 @@ expanduser
 defaultdict
 display_path
 indent_log
+Wheel
 RequirementSet
 normalize_path
 DistributionNotFound
@@ -23,10 +24,12 @@ is_dir_url
 is_vcs_url
 VcsHashUnsupported
 Requirements
+HashUnpinned
 logger
 HashError
 logging
 pkg_resources
+check_dist_requires_python
 os
 IsSDist
 absolute_import

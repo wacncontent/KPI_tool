@@ -16,6 +16,7 @@ bdist
 upload
 build_ext
 build_py
+py36compat
 develop
 bdist_wininst
 sdist

@@ -10,7 +10,7 @@ CacheControlAdapter
 DownloadProgressSpinner
 ask_path_exists
 CaseInsensitiveDict
-call_subprocess
+is_dir_url
 InsecureHTTPAdapter
 __all__
 sys
@@ -33,6 +33,7 @@ _scheme_re
 pip
 cgi
 PipSession
+libc_ver
 LockError
 mimetypes
 platform
@@ -48,6 +49,7 @@ AuthBase
 _progress_indicator
 DownloadProgressBar
 Response
+get_netrc_auth
 is_vcs_url
 xmlrpc_client
 six
@@ -55,8 +57,8 @@ _check_download_dir
 _download_url
 HTTPBasicAuth
 unpack_file_url
-is_dir_url
 backup_dir
+call_subprocess
 HTTPAdapter
 HAS_TLS
 format_size

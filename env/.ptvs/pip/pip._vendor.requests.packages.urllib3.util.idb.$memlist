@@ -10,7 +10,7 @@ retry
 assert_fingerprint
 timeout
 get_host
-resolve_ssl_version
+request
 absolute_import
 __all__
 make_headers
@@ -22,4 +22,5 @@ ssl_wrap_socket
 is_fp_closed
 SSLContext
 is_connection_dropped
-request
+resolve_ssl_version
+IS_PYOPENSSL

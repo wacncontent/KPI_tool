@@ -9,4 +9,5 @@ Command
 FeedParser
 search_packages_info
 ERROR
+canonicalize_name
 logger

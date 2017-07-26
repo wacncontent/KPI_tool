@@ -6,6 +6,7 @@ os
 winapi_test
 is_a_tty
 WinTerm
+is_stream_closed
 AnsiStyle
 WinStyle
 WinColor

@@ -1,10 +1,9 @@
 Filter
-rcdataElements
-LintError
+text_type
 absolute_import
 unicode_literals
 division
 spaceCharacters
-cdataElements
-_base
 voidElements
+base
+namespaces

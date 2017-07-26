@@ -4,7 +4,7 @@ get_path_uid
 imp
 stdlib_pkgs
 logging_dictConfig
-get_stdlib
+os
 ipaddress
 console_to_str
 samefile
@@ -15,9 +15,8 @@ __all__
 division
 text_type
 expanduser
-os
+get_stdlib
 native_str
-ordereddict
 WINDOWS
 total_seconds
 uses_pycache

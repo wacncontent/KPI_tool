@@ -18,7 +18,7 @@ yield_lines
 DistutilsPlatformError
 PackageIndex
 shlex
-_update_zipimporter_cache
+__all__
 random
 egg_info
 DistributionNotFound
@@ -27,6 +27,7 @@ configparser
 glob
 EggMetadata
 warnings
+_one_liner
 contextlib
 parse_requirement_arg
 WindowsExecutableLauncherWriter
@@ -42,7 +43,6 @@ chmod
 bdist_egg
 site
 stat
-platform
 is_python
 RewritePthDistributions
 URL_SCHEME
@@ -68,7 +68,7 @@ _to_ascii
 six
 sys_executable
 get_distribution
-__all__
+_update_zipimporter_cache
 PathMetadata
 get_script_header
 get_site_dirs

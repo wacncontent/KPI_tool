@@ -25,6 +25,7 @@ pre
 SUPPRESS_HELP
 resolve_wheel_no_use_binary
 src
+ignore_requires_python
 hash
 exists_action
 no_deps

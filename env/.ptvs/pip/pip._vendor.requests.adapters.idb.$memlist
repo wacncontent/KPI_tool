@@ -14,7 +14,9 @@ ReadTimeoutError
 DEFAULT_POOLBLOCK
 Response
 _ProxyError
+InvalidSchema
 RetryError
+ConnectionError
 CaseInsensitiveDict
 ProxyError
 urlparse
@@ -34,8 +36,9 @@ ClosedPoolError
 os
 ProtocolError
 HTTPAdapter
+SOCKSProxyManager
 TimeoutSauce
-ConnectionError
+to_native_string
 MaxRetryError
 DEFAULT_RETRIES
 DEFAULT_POOLSIZE

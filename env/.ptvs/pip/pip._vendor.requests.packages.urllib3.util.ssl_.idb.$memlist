@@ -12,6 +12,7 @@ wrap_socket
 SSLError
 SSLContext
 OP_NO_COMPRESSION
+resolve_ssl_version
 absolute_import
 create_default_context
 resolve_cert_reqs
@@ -29,4 +30,4 @@ OP_NO_SSLv2
 SNIMissingWarning
 create_urllib3_context
 HASHFUNC_MAP
-resolve_ssl_version
+IS_PYOPENSSL

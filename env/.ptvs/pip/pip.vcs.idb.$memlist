@@ -7,8 +7,9 @@ os
 ask_path_exists
 logger
 get_src_requirement
+VersionControl
 bazaar
-mercurial
+sys
 absolute_import
 __all__
 logging
@@ -17,6 +18,6 @@ errno
 call_subprocess
 shutil
 backup_dir
-VersionControl
+mercurial
 rmtree
 urllib_parse

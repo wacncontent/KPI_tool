@@ -4,12 +4,11 @@ cgi
 collections
 codecs
 get_encoding_from_headers
-platform
 socket
+InvalidHeader
 cookiejar_from_dict
 default_user_agent
 proxy_bypass
-to_key_val_list
 struct
 get_auth_from_url
 select_proxy
@@ -21,10 +20,12 @@ guess_json_utf
 get_netrc_auth
 quote
 add_dict_to_cookiejar
+_CLEAN_HEADER_REGEX_BYTE
 requote_uri
 unquote_header_value
 getproxies
 iter_slices
+urldefragauth
 parse_dict_header
 is_valid_cidr
 _hush_pyflakes
@@ -43,9 +44,10 @@ io
 warnings
 DEFAULT_CA_BUNDLE_PATH
 unquote
+check_header_validity
 prepend_scheme_if_needed
 builtin_str
-sys
+to_key_val_list
 dict_to_sequence
 _null3
 get_unicode_from_response
@@ -62,7 +64,7 @@ super_len
 _null
 __version__
 urlunparse
-urldefragauth
+_CLEAN_HEADER_REGEX_STR
 to_native_string
 parse_header_links
 should_bypass_proxies
